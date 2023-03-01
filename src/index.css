@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --clr-primary-light-cyan: hsl(193, 38%, 86%);
+  --clr-primary-neon-green: hsl(150, 100%, 66%);
+  --clr-neutral-grayish-blue: hsl(217, 19%, 38%);
+  --clr-neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --clr-neutral-dark-blue: hsl(218, 23%, 16%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  --fs-quote: 28px;
+  --fs-400: 400;
+  --fs-700: 700;
+  --fs-800: 800;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-inline: 2rem;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--clr-neutral-dark-blue);
+  color: var(--clr-neutral-white);
+}
+
+hr {
+  background-color: var(--clr-primary-light-cyan);
+}
+
+.app {
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  background-color: var(--clr-neutral-dark-grayish-blue);
+  padding: 1.125rem;
+  border-radius: 1rem;
+  width: clamp(320px, 50%, 500px);
+}
+
+.card .card-header {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: var(--clr-primary-neon-green);
+  margin-bottom: 2rem;
+  font-weight: var(--fs-700);
+}
+
+.card .card-content {
+  font-size: var(--fs-quote);
+  color: var(--clr-primary-light-cyan);
+  font-weight: var(--fs-700);
+}
+
+.card .card-content::before {
+  content: open-quote;
+}
+.card .card-content::after {
+  content: close-quote;
+}
+
+.card .card-divider {
+  margin-bottom: 2rem;
+}
+
+.card .card-button {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -34px;
+  border: none;
+  margin-inline: auto;
+  width: 64px;
+  height: 65px;
+  padding: 1rem 1.125rem;
+  background-color: var(--clr-primary-neon-green);
+  border-radius: 100%;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../public/fonts/Manrope-VariableFont_wght.ttf');
+}
+
+@media screen and (min-width: 375px) {
 }

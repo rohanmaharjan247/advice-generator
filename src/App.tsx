@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ReactComponent as Divider } from './images/pattern-divider-mobile.svg';
+import { ReactComponent as Dice } from './images/icon-dice.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <>
+      <main className="app">
+        <div className="card">
+          <p className="card-header">Advice #117</p>
+          <p className="card-content">
+            It is easy to sit up and take notice, what's difficult is getting up
+            and taking action.
+          </p>
+          <Divider className="card-divider" />
+          <button className="card-button">
+            <Dice />
+          </button>
+        </div>
+        {/* Advice #<!-- Advice ID goes here --> */}
+
+        {/* "<!-- Advice text goes here -->" */}
+      </main>
+      <div className="attribution">
+        Challenge by{' '}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
         </a>
-      </header>
-    </div>
+        . Coded by <a href="#">Rohan Maharjan</a>.
+      </div>
+    </>
   );
 }
 
