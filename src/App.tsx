@@ -38,6 +38,8 @@ function App() {
           <Divider className="card-divider" />
           <button
             type="button"
+            id="random-advice"
+            aria-label="random-advice"
             className="card-button"
             onClick={getRandomAdvice}
           >
