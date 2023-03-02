@@ -42,7 +42,7 @@ hr {
   background-color: var(--clr-neutral-dark-grayish-blue);
   padding: 1.125rem;
   border-radius: 1rem;
-  width: clamp(320px, 50%, 500px);
+  width: 320px;
 }
 
 .card .card-header {
@@ -78,6 +78,7 @@ hr {
   right: 0;
   bottom: -34px;
   border: none;
+  cursor: pointer;
   margin-inline: auto;
   width: 64px;
   height: 65px;
@@ -86,10 +87,17 @@ hr {
   border-radius: 100%;
 }
 
+.card .card-button:hover {
+  box-shadow: 0px 0px 35px 10px hsl(150deg 100% 66% / 35%);
+}
+
 @font-face {
   font-family: 'Manrope';
   src: url('../public/fonts/Manrope-VariableFont_wght.ttf');
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
+  .card {
+    width: 500px;
+  }
 }
